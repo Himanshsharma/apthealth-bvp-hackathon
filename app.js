@@ -228,7 +228,7 @@ function call(req, res) {
                            ] ); 
      
     process.stdout.on('data', function(data) { 
-        console.log("him")
+        
         res.render("jj",{ad:data})
         
         
