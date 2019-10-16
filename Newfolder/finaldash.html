@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="timeline.css" rel="stylesheet">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 25px;
+  width: 20%;
+  
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: #B3B4B7;}
+#News {background-color:#0364A6;}
+#Contact {background-color:#0364A6}
+#About {background-color:#0364A6;}
+</style>
+</head>
+<body>
+<div style="background-color: #555 ;height:60px">
+<button class="tablink" onclick="openPage('Home', this, 'green')" id="defaultOpen" style="margin-left:300px">Home</button>
+<button class="tablink" onclick="openPage('About', this, 'green')">About</button>
+<button class="tablink" onclick="openPage('Contact', this, 'green')">Contact</button>
+<button class="tablink" onclick="openPage('News', this, 'green')">News</button>
+</div>
+<div id="Home" class="tabcontent">
+  <div style="width:90%;height:200px;background:whitesmoke;padding:20px ; margin-left:80px"></div>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  
+<div class="timeline">
+  <div class="container left" >
+    <div class="content">
+      <h2>STEP 1</h2>
+      <p> Provide the necessary information.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>STEP 2</h2>
+      <p>Prediction of diseases</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>STEP 3</h2>
+      <p>Report generation</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>STEP 4</h2>
+      <p>treatment.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2011</h2>
+      <p>preventions</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2007</h2>
+      <p>medications</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <div class="container">
+    <img src="hac34.png" alt="Notebook" style="width:100%;">
+    <div class="content">
+      <h1>Heading</h1>
+      <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
