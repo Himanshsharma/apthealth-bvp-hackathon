@@ -2,7 +2,8 @@ var express=require("express")
 var app=express()
 app.set('view engine','ejs')
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true})
+mongoose.connect('mongodb+srv://himansh123:priyanshi@4141@cluster0-ykecj.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true})
+
 
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;

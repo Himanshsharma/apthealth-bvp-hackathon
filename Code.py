@@ -118,8 +118,8 @@ for algo_name in algo_dict.keys():
 df_test = pd.DataFrame(algo_test_scores)
 df_train = pd.DataFrame(algo_train_scores)
 df_test.plot(grid = 1)
-plt.show()
-plt.grid()
+
+
 #building the model at k value 2 
 test_scores={}
 train_scores={}
